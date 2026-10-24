@@ -1,2 +1,261 @@
 ### mcp tool assignment 
 
+===================================================================================================
+
+===================================================================================================
+
+
+1. "Find recent Apache Struts CVEs and also retrieve their EPSS score."
+ans: 
+
+Available Tools
+----------------
+ask_cis_local
+lookup_cve
+lookup_cisa_kev
+lookup_attack
+lookup_epss
+
+===========================
+Here are some recent Apache Struts CVEs along with their EPSS (Exploit Prediction Scoring System) scores:
+
+1. CVE-2005-3745
+   - Description: Cross-site scripting (XSS) vulnerability in Apache Struts 1.2.7 and possibly other versions.
+   - EPSS Score: 0.2571 (97.97th percentile)
+
+2. CVE-2006-1546
+   - Description: Allows remote attackers to bypass validation via a specific request parameter.
+   - EPSS Score: 0.0629 (93.58th percentile)
+
+3. CVE-2006-1547
+   - Description: Denial of service via multipart/form-data encoded form with a crafted parameter name.
+   - EPSS Score: 0.5464 (99.02nd percentile)
+
+4. CVE-2006-1548
+   - Description: Cross-site scripting (XSS) vulnerability in several Struts components.
+   - EPSS Score: 0.0545 (92.72nd percentile)
+
+5. CVE-2007-4556
+   - Description: Recursive evaluation of input as OGNL expression, leading to DoS or code execution.
+   - EPSS Score: 0.2575 (97.97th percentile)
+
+Note: These CVEs are not very recent (mostly from 2005-2007), but they are the latest ones found in the database for Apache Struts. If you need more recent vulnerabilities or have a specific version in mind, please let me know!
+
+
+===================================================================================================
+
+===================================================================================================
+
+
+2.)  "Secure Apache HTTP Server and include recent CVEs, KEV entries, and ATT&CK techniques."
+ans:
+
+    langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
+
+Available Tools
+----------------
+ask_cis_local
+lookup_cve
+lookup_cisa_kev
+lookup_attack
+lookup_epss
+
+===========================
+Here’s a comprehensive guide to securing Apache HTTP Server, including recent CVEs, CISA KEV entries, and relevant security best practices:
+
+---
+
+## Secure Configuration Guidelines (CIS & Best Practices)
+
+- **Disable Unnecessary Modules:** Reduce the attack surface by only enabling required modules.
+- **Enforce SSL/TLS:** Use strong encryption for all data in transit. Obtain and configure a valid SSL certificate.
+- **Strong Authentication:** Require strong authentication for sensitive areas (e.g., admin panels).
+- **Regular Updates:** Keep Apache and all modules up to date to mitigate known vulnerabilities.
+- **Logging & Monitoring:** Enable detailed logging and monitor logs for suspicious activity.
+- **CIS Controls:**
+  - 5.1: Establish Secure Configurations
+  - 16.4: Encrypt or Hash all Authentication Credentials
+  - 18.11.1: Disable HTTP proxy features (WPAD)
+  - 18.11.2: Disable proxy authentication over loopback interfaces
+
+---
+
+## Recent CVEs (Critical/High Impact)
+
+- **CVE-2024-38475 (KEV)**
+  - Vulnerability in mod_rewrite allows attackers to map URLs to unintended filesystem locations, potentially leading to code execution or source code disclosure.
+  - Action: Apply vendor mitigations or discontinue use if not possible.
+
+- **CVE-2021-42013 (KEV)**
+  - Path traversal vulnerability allowing remote code execution if files outside Alias-like directories are not properly restricted.
+  - Action: Update Apache to the latest version.
+
+- **CVE-2021-41773 (KEV)**
+  - Related to CVE-2021-42013; incomplete patch for path traversal and remote code execution.
+  - Action: Update Apache to the latest version.
+
+- **CVE-2021-40438 (KEV)**
+  - Crafted URI-path can cause mod_proxy to forward requests to attacker-controlled servers.
+  - Action: Update Apache to the latest version.
+
+- **CVE-2019-0211 (KEV)**
+  - Privilege escalation via manipulation of the scoreboard in certain MPMs.
+  - Action: Update Apache to the latest version.
+
+---
+
+## CISA Known Exploited Vulnerabilities (KEV)
+
+The above CVEs (CVE-2024-38475, CVE-2021-42013, CVE-2021-41773, CVE-2021-40438, CVE-2019-0211) are all listed in the CISA KEV catalog, indicating active exploitation in the wild. Immediate remediation is critical.
+
+---
+
+## MITRE ATT&CK Techniques
+
+No specific MITRE ATT&CK techniques were found directly mapped to Apache HTTP Server in this search. However, common techniques relevant to web servers include:
+
+- Exploitation of Public-Facing Application (T1190)
+- Valid Accounts (T1078)
+- Command and Scripting Interpreter (T1059)
+- File and Directory Traversal (T1083)
+
+---
+
+## Summary Recommendations
+
+1. **Patch Immediately:** Apply all security updates for Apache HTTP Server and its modules.
+2. **Restrict Access:** Use “Require all denied” by default and only allow access where necessary.
+3. **Disable CGI Scripts:** Unless absolutely required, disable CGI execution.
+4. **Harden Configuration:** Follow CIS benchmarks and disable directory listing, unnecessary HTTP methods, and proxy features.
+5. **Monitor & Respond:** Set up alerting for suspicious activity and regularly review logs.
+
+Would you like detailed configuration examples or further guidance on any of these points?
+
+(langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>
+
+
+===================================================================================================
+
+===================================================================================================
+
+
+
+3.  "Prioritize patching for CVE-2023-34362 using its EPSS score."
+ans:
+
+(langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
+
+Available Tools
+----------------
+ask_cis_local
+lookup_cve
+lookup_cisa_kev
+lookup_attack
+lookup_epss
+
+===========================
+CVE-2023-34362 has an EPSS score of 0.99934, placing it in the 99.97th percentile. This extremely high score indicates a very high likelihood of exploitation in the wild.
+
+You should prioritize patching this vulnerability as soon as possible.
+
+
+===================================================================================================
+
+===================================================================================================
+
+
+4.)  "Prepare a risk assessment for Microsoft Exchange Server using CIS guidance, CVEs, KEV, and EPSS."
+Ans: 
+(langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
+
+Available Tools
+----------------
+ask_cis_local
+lookup_cve
+lookup_cisa_kev
+lookup_attack
+lookup_epss
+
+===========================
+Here is a risk assessment for Microsoft Exchange Server, integrating CIS guidance, recent CVEs, CISA Known Exploited Vulnerabilities (KEV), and EPSS exploit likelihood scores:
+
+---
+
+## 1. CIS Security Guidance
+
+The CIS Benchmarks for Microsoft Exchange Server recommend the following key controls:
+- **Disable unnecessary services** to reduce attack surface.
+- **Restrict ports, protocols, and services** to only those required.
+- **Encrypt sensitive data in transit** (e.g., enforce TLS for email).
+- **Implement strong authentication** (preferably MFA).
+- **Regularly update and patch** Exchange Server.
+- **Monitor and audit logs** for suspicious activity.
+
+These controls are essential for protecting sensitive communications and organizational data.
+
+---
+
+## 2. Recent and High-Risk Vulnerabilities
+
+Several critical vulnerabilities have affected Microsoft Exchange Server in recent years, many of which are actively exploited and listed in CISA KEV. Notable examples include:
+
+- **CVE-2022-41082 ("ProxyNotShell")**: Authenticated remote code execution. EPSS: 0.9997 (very high likelihood of exploitation).
+- **CVE-2022-41040 ("ProxyNotShell")**: Server-side request forgery, chainable with CVE-2022-41082. EPSS: 0.9996.
+- **CVE-2021-26855 ("ProxyLogon")**: Remote code execution, part of a widely exploited chain. EPSS: 0.99996.
+- **CVE-2021-34473**: Remote code execution. EPSS: 0.99999.
+- **CVE-2020-0688**: Remote code execution due to improper key management. EPSS: 0.99962.
+
+All of these vulnerabilities are listed in the CISA KEV catalog, indicating confirmed exploitation in the wild.
+
+---
+
+## 3. Risk Assessment
+
+- **Likelihood of Exploitation**: Extremely high, as indicated by EPSS scores (all above 0.9995) and CISA KEV inclusion.
+- **Impact**: Successful exploitation can lead to full system compromise, data theft, privilege escalation, and lateral movement within the network.
+- **Attack Surface**: Exchange Server is often internet-facing and handles sensitive communications, making it a prime target.
+- **Mitigations**: Immediate patching, disabling unnecessary services, enforcing strong authentication, and monitoring are critical.
+
+---
+
+## 4. Recommendations
+
+1. **Patch Immediately**: Apply all security updates for Exchange Server as soon as they are released.
+2. **Implement CIS Controls**: Follow CIS benchmarks for configuration, authentication, and encryption.
+3. **Monitor for Exploitation**: Use threat intelligence and log monitoring to detect signs of compromise.
+4. **Restrict Access**: Limit Exchange Server exposure to the internet and restrict administrative access.
+5. **Incident Response**: Prepare for rapid response in case of exploitation, including isolation and forensic analysis.
+
+---
+
+**Summary**: Microsoft Exchange Server faces a high risk from actively exploited vulnerabilities with a high likelihood of attack. Strict adherence to CIS guidance, rapid patching, and vigilant monitoring are essential to mitigate these risks.
+
+
+===================================================================================================
+
+===================================================================================================
+
+
+5.)  "Identify actively exploited vulnerabilities affecting VMware ESXi."
+Ans:
+(langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
+
+Available Tools
+----------------
+ask_cis_local
+lookup_cve
+lookup_cisa_kev
+lookup_attack
+lookup_epss
+
+===========================
+The following vulnerabilities affecting VMware ESXi are actively exploited, according to the CISA Known Exploited Vulnerabilities (KEV) catalog:
+
+1. CVE-2025-22226: Information disclosure via out-of-bounds read in HGFS. Allows attackers with admin privileges in a VM to leak memory from the vmx process.
+2. CVE-2025-22225: Arbitrary write vulnerability. Attackers with privileges in the VMX process can escape the sandbox via arbitrary kernel write.
+3. CVE-2025-22224: TOCTOU race condition leading to out-of-bounds write. Attackers with local admin privileges on a VM can execute code as the VMX process on the host.
+4. CVE-2024-37085: Authentication bypass. Attackers with sufficient Active Directory permissions can gain full access to an ESXi host by re-creating a deleted AD group.
+5. CVE-2019-5544: Heap-based buffer overflow in OpenSLP. Attackers with network access to port 427 can achieve remote code execution.
+6. CVE-2020-3992: Use-after-free in OpenSLP. Attackers with management network access to port 427 can achieve remote code execution.
+
+These vulnerabilities are confirmed as actively exploited and require immediate attention. Apply vendor patches and mitigations as soon as possible.
