@@ -1,0 +1,46 @@
+### New Tool assignments
+
+
+
+------------------------------------------------------------------------
+
+# Part 4 -- Test Cases
+
+  -----------------------------------------------------------------------
+  \#             Test Query
+  -------------- --------------------------------------------------------
+  1              Show known exploited vulnerabilities affecting Windows
+                 SMB.
+
+Ans: 
+{'messages': [HumanMessage(content='Show known exploited vulnerabilities affecting Windows SMB.', additional_kwargs={}, response_metadata={}, id='f19a4bd9-54b6-4ac5-b9c4-9ad1ca089cff'), AIMessage(content='', additional_kwargs={'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 18, 'prompt_tokens': 296, 'total_tokens': 314, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cache_write_tokens': None, 'cached_tokens': 0}}, 'model_provider': 'openai', 'model_name': 'gpt-4.1-mini-2025-04-14', 'system_fingerprint': 'fp_a93940b23f', 'id': 'chatcmpl-EcWi1hC1zFXlMMHlYHTxwJsVxmhRT', 'service_tier': 'default', 'finish_reason': 'tool_calls', 'logprobs': None}, id='lc_run--01a16e3d-c6ea-72e2-aff3-81f229769aff-0', tool_calls=[{'name': 'lookup_cisa_kev', 'args': {'keyword': 'Windows SMB'}, 'id': 'call_xfKkPWZY4dB3mrrigDM7b4LL', 'type': 'tool_call'}], invalid_tool_calls=[], usage_metadata={'input_tokens': 296, 'output_tokens': 18, 'total_tokens': 314, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}), ToolMessage(content='CVE: CVE-2025-33073\nVendor: Microsoft\nProduct: Windows\nDescription: Microsoft Windows SMB Client contains an improper access control vulnerability that could allow for privilege escalation. An attacker could execute a specially crafted malicious script to coerce the victim machine to connect back to the attack system using SMB and authenticate.\nRequired Action: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\n\nCVE: CVE-2019-0703\nVendor: Microsoft\nProduct: Windows\nDescription: An information disclosure vulnerability exists in the way that the Windows SMB Server handles certain requests, which could lead to information disclosure from the server.\nRequired Action: Apply updates per vendor instructions.', name='lookup_cisa_kev', id='0e103fe2-9d28-46be-b43a-10ad83c4740f', tool_call_id='call_xfKkPWZY4dB3mrrigDM7b4LL'), AIMessage(content='There are known exploited vulnerabilities affecting Windows SMB:\n\n1. CVE-2025-33073: This vulnerability in Microsoft Windows SMB Client involves improper access control that could allow privilege escalation. An attacker could execute a specially crafted malicious script to coerce the victim machine to connect back to the attack system using SMB and authenticate. The recommended action is to apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\n\n2. CVE-2019-0703: This is an information disclosure vulnerability in the way Windows SMB Server handles certain requests, potentially leading to information disclosure from the server. The recommended action is to apply updates per vendor instructions.\n\nWould you like guidance on how to mitigate or patch these vulnerabilities?', additional_kwargs={'refusal': None}, response_metadata={'token_usage': {'completion_tokens': 162, 'prompt_tokens': 484, 'total_tokens': 646, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cache_write_tokens': None, 'cached_tokens': 0}}, 'model_provider': 'openai', 'model_name': 'gpt-4.1-mini-2025-04-14', 'system_fingerprint': 'fp_a93940b23f', 'id': 'chatcmpl-EcWi2hjBL5YKF28wlxbmTSstbq2Ig', 'service_tier': 'default', 'finish_reason': 'stop', 'logprobs': None}, id='lc_run--01a16e3d-cb6f-7d03-8587-1e461c7655c9-0', tool_calls=[], invalid_tool_calls=[], usage_metadata={'input_tokens': 484, 'output_tokens': 162, 'total_tokens': 646, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}})]}
+
+
+
+  2              Explain the MITRE ATT&CK technique for Pass-the-Hash.
+
+  3              What is the EPSS score for CVE-2021-44228?
+
+  4              Secure Apache HTTP Server and include recent CVEs, KEV
+                 entries, and ATT&CK techniques.
+
+  5              How should I harden OpenSSH considering current
+                 vulnerabilities and attacker techniques?
+
+  6              Prepare a risk assessment for Microsoft Exchange Server
+                 using CIS guidance, CVEs, KEV, and EPSS.
+
+  7              Identify actively exploited vulnerabilities affecting
+                 VMware ESXi.
+
+  8              Show MITRE ATT&CK techniques related to ransomware.
+
+  9              Prioritize patching for CVE-2023-34362 using its EPSS
+                 score.
+
+  10             Generate a complete security assessment for Windows SMB
+                 including CIS recommendations, CVEs, KEV, MITRE ATT&CK,
+                 and EPSS information.
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
