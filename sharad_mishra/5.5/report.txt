@@ -3,8 +3,6 @@
 ===================================================================================================
 
 ===================================================================================================
-
-
 1. "Find recent Apache Struts CVEs and also retrieve their EPSS score."
 ans: 
 
@@ -45,8 +43,6 @@ Note: These CVEs are not very recent (mostly from 2005-2007), but they are the l
 ===================================================================================================
 
 ===================================================================================================
-
-
 2.)  "Secure Apache HTTP Server and include recent CVEs, KEV entries, and ATT&CK techniques."
 ans:
 
@@ -137,9 +133,6 @@ Would you like detailed configuration examples or further guidance on any of the
 ===================================================================================================
 
 ===================================================================================================
-
-
-
 3.  "Prioritize patching for CVE-2023-34362 using its EPSS score."
 ans:
 
@@ -162,8 +155,6 @@ You should prioritize patching this vulnerability as soon as possible.
 ===================================================================================================
 
 ===================================================================================================
-
-
 4.)  "Prepare a risk assessment for Microsoft Exchange Server using CIS guidance, CVEs, KEV, and EPSS."
 Ans: 
 (langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
@@ -234,8 +225,6 @@ All of these vulnerabilities are listed in the CISA KEV catalog, indicating conf
 ===================================================================================================
 
 ===================================================================================================
-
-
 5.)  "Identify actively exploited vulnerabilities affecting VMware ESXi."
 Ans:
 (langflow) C:\Users\user\Desktop\sharad-ai\shared\ey-ai-upskill-13\31-mcp-demo>python mcp-cyber-client.py
